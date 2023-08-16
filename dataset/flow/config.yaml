@@ -1,0 +1,6 @@
+model:
+  classes: 5
+data:
+  data_root: dataset/flow/
+  data_variant: "all"
+  data_classes_ignore: [5]

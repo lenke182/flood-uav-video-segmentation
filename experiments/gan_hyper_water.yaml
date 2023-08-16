@@ -1,0 +1,36 @@
+program: "./train_flow.sh"
+method: bayes
+command: 
+  - ${program}
+  - "gan"
+  - "--data.train_w"
+  - "433"
+  - "--config"
+  - "dataset/flow/config_only_water.yaml"
+  - "--tag"
+  - "exp-50"
+  - ${args}
+metric:
+  name: val_miou_epoch
+  goal: maximize
+parameters:
+  model.arch:
+    values:
+      - "deeplabv3"
+      - "pspnet"
+  model.optim.lr:
+    min: 0.0
+    max: 2.5e-3
+  model.optim.lr_D:
+    min: 0.0
+    max: 1.0e-3
+  model.optim.momentum:
+    min: 0.6
+    max: 1.0
+  model.optim.weight_decay:
+    min: 0.0
+    max: 0.001
+  model.power:
+    min: 0.85
+    max: 0.95
+  

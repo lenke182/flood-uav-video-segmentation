@@ -1,0 +1,35 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+torch = "==1.11.0"
+pytorch_lightning = "==1.9.3"
+opencv-python = "*"
+argparse = "*"
+scikit-image = "*"
+jsonargparse = {extras = ["signatures"], version = "*"}
+wandb = "0.13.4"
+torchvision = "*"
+segmentation-models-pytorch = "*"
+tensorboardx = "*"
+scipy = "*"
+einops = "*"
+scikit-learn = "*"
+dataclasses-json = "*"
+imageio = {extras = ["ffmpeg"], version = "*"}
+motion-vector-extractor = "*"
+pandas = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"
+
+[scripts]
+supervised = "python3 supervised.py"
+contrastive = "python3 contrastive.py"
+gan = "python3 gan.py"
+flow_supervised = "python3 flow_supervised.py"
+flow_gan = "python3 flow_gan.py"

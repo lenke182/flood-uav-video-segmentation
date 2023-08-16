@@ -1,0 +1,10 @@
+model:
+  arch: "vit"
+  aux: False
+  optim:
+    lr: 0.001
+  loss:
+    loss: "criterion"
+data:
+  batch_size: 4
+  train_w: 768

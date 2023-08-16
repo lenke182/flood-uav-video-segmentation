@@ -1,0 +1,4 @@
+model:
+  classes: 2
+data:
+  data_classes_ignore: [2,3,4,5]

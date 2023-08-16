@@ -1,0 +1,21 @@
+program: "./train_flow.sh"
+method: grid
+command: 
+  - ${program}
+  - "flow_supervised"
+  - "--data.train_w"
+  - "433"
+  - "--model.no_warp"
+  - "True"
+  - "--model.feature_based"
+  - "False"
+  - "--tag"
+  - "exp-56"
+  - ${args}
+metric:
+  name: val_miou_epoch
+  goal: maximize
+parameters:
+  data.frame_delta:
+    values: [2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25]
+  

@@ -1,0 +1,48 @@
+# pytorch_lightning==1.7.7
+seed_everything: 42
+trainer:
+  logger: true
+  enable_checkpointing: true
+  num_nodes: 1
+  devices: 1
+  auto_select_gpus: true
+  enable_progress_bar: true
+  overfit_batches: 0.0
+  track_grad_norm: -1
+  check_val_every_n_epoch: 1
+  fast_dev_run: false
+  accumulate_grad_batches: null
+  max_epochs: 100
+  max_time: null
+  limit_train_batches: null
+  limit_val_batches: null
+  limit_test_batches: null
+  limit_predict_batches: null
+  val_check_interval: null
+  log_every_n_steps: 1
+  accelerator: auto
+  strategy: ddp
+  precision: 32
+  enable_model_summary: true
+  num_sanity_val_steps: 2
+  resume_from_checkpoint: null
+  profiler: simple
+  benchmark: true
+  deterministic: false
+  reload_dataloaders_every_n_epochs: 0
+  auto_lr_find: false
+  detect_anomaly: false
+  auto_scale_batch_size: null
+  plugins: null
+  amp_level: null
+  move_metrics_to_cpu: false
+  multiple_trainloader_mode: max_size_cycle
+data:
+  batch_size: 2
+  batch_size_val: 1
+  workers: 8
+  workers_test: 8
+model:
+  arch: "pspnet"
+wandb: project_name
+ckpt_path: null
